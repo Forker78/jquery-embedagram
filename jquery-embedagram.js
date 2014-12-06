@@ -2,7 +2,7 @@
  * embedagram - embed your instagram photos
  *   http://embedagram.com/plugin.php
  *
- * Copyright (c) 2011 Matthew Hokanson (http://h0ke.com)
+ * Copyright (c) 2011-2014 Matthew Hokanson (http://h0ke.com)
  * Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
  */
 (function($){
@@ -19,14 +19,14 @@
                 success: function() { return true;  },
             };
 
-            var options = $.extend(defaults, options);
+            options = $.extend(defaults, options);
 
             return this.each(function() {
                 var o = options;
-                var obj = $(this);  
+                var obj = $(this);
 
                 // set the jsonp url
-                var jsonp_url = "http://embedagram.com/e/plugin/" + o.instagram_id + "/?callback=?";
+                var jsonp_url = "//embedagram.com/e/plugin/" + o.instagram_id + "/?callback=?";
                 jsonp_url += "&thumb_width=" + o.thumb_width + "&wrap_tag=" + o.wrap_tag;
                 jsonp_url += "&limit=" + o.limit + "&link_type=" + o.link_type;
                 
